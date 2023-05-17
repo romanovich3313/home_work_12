@@ -125,21 +125,32 @@ class Birthday(Field):
 book = AddressBook()
 
 
-record = Record("roma", "10.12.1995")
-record2 = Record("roma", "20.12.1995")
-print(record.birthday)  # none!!!!!!!!!!!!!!!!!!!!!!!!!!
+record1 = Record('John Doe', Phone('1234567890'), '01.01.1990')
+record2 = Record('Jane Smith', Phone('9876543210'), '15.05.1985')
+record3 = Record('Mike Johnson', Phone('4567890123'), '10.10.1995')
 
-record.add_phone("23343434")
-book.add_record(record)
-print(record)
+book.add_record(record1)
+book.add_record(record2)
+book.add_record(record3)
 
-name = Name("Ivan")
-phone = Phone("0958887481")
-birthday = Birthday("20.05.95")
+book.save_to_file('address_book')
 
-rec = Record(name, phone, birthday)
-book.add_record(rec)
-print(rec.days_to_birthday())
+
+# record = Record("roma", "10.12.1995")
+# record2 = Record("roma", "20.12.1995")
+# print(record.birthday)  # none!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# record.add_phone("23343434")
+# book.add_record(record)
+# print(record)
+
+# name = Name("Ivan")
+# phone = Phone("0958887481")
+# birthday = Birthday("20.05.95")
+
+# rec = Record(name, phone, birthday)
+# book.add_record(rec)
+# print(rec.days_to_birthday())
 
 # record = Record("roma", "10-12-1995")
 # record.add_phone("23343434")
