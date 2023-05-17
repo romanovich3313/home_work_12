@@ -83,9 +83,9 @@ def parse_command(command):
 
 
 def main():
-    
+
     book = AddressBook()
-    book.read_from_file('phone_book.bin')
+    book.read_from_file('phone_book.dat')
 
     print(hello_user())
     while True:
